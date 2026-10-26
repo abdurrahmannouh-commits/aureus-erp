@@ -9,6 +9,7 @@ services:
       - aureus-storage:/var/www/aureuserp/storage
       - aureus-mysql:/var/lib/mysql
     environment:
+      - APP_ENV=local
       - APP_URL=http://localhost:8085
       - APP_NAME=Aureus ERP
 
