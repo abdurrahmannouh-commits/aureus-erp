@@ -5,15 +5,15 @@ services:
     restart: unless-stopped
     ports:
       - "8085:80"
-      - "3307:3306"
     volumes:
-      - aureus_storage:/var/www/html/storage
-      - aureus_db_data:/var/lib/mysql
+      - aureus-storage:/var/www/aureuserp/storage
+      - aureus-mysql:/var/lib/mysql
     environment:
       - APP_URL=http://localhost:8085
+      - APP_NAME=Aureus ERP
 
 volumes:
-  aureus_storage:
-    name: aureus_storage
-  aureus_db_data:
-    name: aureus_db_data
+  aureus-storage:
+    name: aureus-storage
+  aureus-mysql:
+    name: aureus-mysql
